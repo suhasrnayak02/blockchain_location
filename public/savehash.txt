@@ -1,0 +1,45 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const MongoClient = require('mongodb').MongoClient;
+
+const app = express();
+const PORT = 3000;
+
+app.use(bodyParser.json());
+
+// MongoDB connection URL (replace with your actual MongoDB URL)
+const mongoUrl = 'mongodb://localhost:27017'; // Default MongoDB port
+const dbName = 'myapp';
+const collectionName = 'users';
+
+// Middleware to simulate authentication and retrieve the username
+app.use((req, res, next) => {
+  // Simulate authentication and retrieve the logged-in username from the request
+  req.username = 'sudhanvagv13@gmail.com'; // Example username, replace with actual retrieval method
+  next();
+});
+
+// Route handler to store block hash in MongoDB
+app.post('/storeBlockHash', async (res) => {
+  try {
+    const { email } = req;
+    const { blockHash } = req.body;
+
+    const client = await MongoClient.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+    const db = client.db(dbName);
+    const collection = db.collection(collectionName);
+
+    await collection.insertOne({ email, blockHash });
+
+    client.close();
+
+    res.status(200).json({ success: true, message: 'Block hash stored in MongoDB successfully' });
+  } catch (error) {
+    console.error('Error storing block hash in MongoDB:', error);
+    res.status(500).json({ success: false, message: 'Error storing block hash in MongoDB' });
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geolocation Privacy</title>
+  <!-- External CSS file for styling -->
+  <link rel="stylesheet" href="E:\loginpage\public\dev final\styles.css">
+  <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      background-image: url('E:\loginpage\background.jpg'); /* Add your background image URL here */
+      background-size: cover;
+      background-position: center;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.5); /* Add semi-transparent background color */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+    }
+
+    .buttons-section {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .action-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .action-button:hover {
+      background-color: #45a049;
+    }
+
+    .data-section {
+      background-color: rgba(255, 255, 255, 0.9); /* Add semi-transparent background color */
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
+    }
+
+    .info-text {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .block-hash-input {
+      width: calc(100% - 150px);
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .block-data-output {
+      margin-top: 20px;
+    }
+    /* styles.css */
+
+/* Header styles */
+header {
+  background-color: #ffffff; /* White background */
+  padding: 20px; /* Add padding for spacing */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Align items with space between */
+  align-items: center; /* Center align items vertically */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.logo {
+  height: 50px; /* Adjust logo height */
+  margin-right: 20px; /* Add margin to separate logo from the logout button */
+}
+
+h1 {
+  margin: 0; /* Remove default margin */
+  color: #333333; /* Dark gray text color */
+}
+
+/* Logout button styles */
+#logoutBtn {
+  background-color: #4CAF50; /* Green background color */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Add padding for button size */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s; /* Add transition effect for hover */
+}
+
+#logoutBtn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Geolocation Privacy</h1>
+    <img src="https://tse4.mm.bing.net/th?id=OIP.7CfqUacgWCt3j_tAhzyMZAHaGt&pid=Api&P=0&h=180 " alt="Logo" class="logo">
+    <button id="logoutBtn">Logout</button>
+  </header>
+
+  <section class="buttons-section">
+    <button id="getLocationBtn" class="action-button">Get Location</button>
+    <button id="retrieveLocationBtn" class="action-button">Retrieve Location</button>
+    <button id="getBlockHashBtn" class="action-button">Get Block Hash</button>
+    <button id="myLocationBtn" class="action-button">My Location</button>
+  </section>
+
+  <section id="locationInfo" class="data-section">
+    <img src="https://tse1.mm.bing.net/th?id=OIP.GjyasIl5vrmGOVNPgpqRZwHaHa&pid=Api&P=0&h=180" alt="Location Icon" class="icon">
+    <p class="info-text">Location Information</p>
+  </section>
+
+  <section id="blockData" class="data-section">
+    <img src="https://tse4.mm.bing.net/th?id=OIP.PrjxdFKZ0NChGP8hCiYRtAHaHa&pid=Api&P=0&h=180" alt="Block Icon" class="icon">
+    <label for="blockHashInput">Enter Block Hash:</label>
+    <input type="text" id="blockHashInput" class="block-hash-input">
+    <button id="getBlockDataBtn" class="action-button">Get Block Data</button>
+    <div id="blockDataOutput" class="block-data-output"></div>
+  </section>
+
+  <script src="http://localhost:3000/new1.js"></script>
+  <script src="http://localhost:3000/hash.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/elliptic/6.5.4/elliptic.min.js"></script>
+</body>
+</html>

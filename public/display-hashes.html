@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Hashes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .hash-item {
+            margin-bottom: 10px;
+        }
+
+        .hash-item span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hashes</h1>
+        <div id="hashList"></div>
+    </div>
+    <section id="blockData" class="data-section">
+        <img src="public\dev final\block.webp" alt="Block Icon" class="icon">
+        <label for="blockHashInput">Enter Block Hash:</label>
+        <input type="text" id="blockHashInput" class="block-hash-input">
+        <button id="retrieveLocationBtn" class="action-button">Get Block Data</button>
+        <div id="blockDataOutput" class="block-data-output"></div>
+      </section>
+
+    
+<script src="http://localhost:3000/new1.js"></script>
+<script src="http://localhost:3000/hash.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/elliptic/6.5.4/elliptic.min.js"></script>
+  <script>
+    // Retrieve hashes from sessionStorage
+    const hashes = JSON.parse(sessionStorage.getItem('hashes'));
+
+    // Check if hashes is an array before attempting to iterate
+    if (Array.isArray(hashes)) {
+        // Display hashes in the hashList div
+        const hashListDiv = document.getElementById('hashList');
+        hashes.forEach(userHashes => {
+            const email = userHashes.email;
+            const userHashList = userHashes.hashes;
+
+            const userDiv = document.createElement('div');
+            userDiv.classList.add('user-hashes');
+
+            const emailHeader = document.createElement('h2');
+            emailHeader.textContent = `Email: ${email}`;
+            userDiv.appendChild(emailHeader);
+
+            userHashList.forEach(hash => {
+                const p = document.createElement('p');
+                p.classList.add('hash-item');
+                p.innerHTML = `Hash: <span>${hash}</span>`;
+                userDiv.appendChild(p);
+            });
+
+            hashListDiv.appendChild(userDiv);
+        });
+    } else {
+        console.error('Hashes are not available or not in the expected format.');
+    }
+</script>
+
+</body>
+</html>

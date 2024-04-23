@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.2/web3.min.js"></script>
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://tse3.mm.bing.net/th?id=OIP.aGtXwNvEnmMXIei4bOVHgQHaEb&pid=Api&P=0&h=180'); /* Background image URL */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .grid {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-image: url('https://tse3.mm.bing.net/th?id=OIP.aGtXwNvEnmMXIei4bOVHgQHaEb&pid=Api&P=0&h=180'); /* Blockchain-related image URL */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        p {
+            color: #fff;
+        }
+
+        .advantages {
+            margin-top: 50px;
+            color: #fff;
+        }
+
+        .advantages h2 {
+            color: #1E90FF;
+        }
+
+        .advantages ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .advantages li {
+            margin-bottom: 10px;
+        }
+
+        .advantages li:before {
+            content: "✓ ";
+            color: #1E90FF;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Dashboard</h1>
+
+    <div class="container">
+        <div class="grid">
+           
+        </div>
+        <div class="grid">
+           
+        </div>
+    </div>
+
+    <div class="advantages">
+        <h2>Advantages of Web3 and Blockchain:</h2>
+        <ul>
+            <li>Decentralization: No central authority controls the network.</li>
+            <li>Security: Data is encrypted and stored across multiple nodes, making it highly secure.</li>
+            <li>Transparency: All transactions are recorded on a public ledger, ensuring transparency.</li>
+            <li>Trustless Transactions: Transactions can be made without the need for intermediaries.</li>
+            <li>Immutable Records: Once recorded, data cannot be altered or tampered with.</li>
+            <li>Smart Contracts: Self-executing contracts with predefined conditions.</li>
+        </ul>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            window.location.href = '/loc12.html'; // Redirect to loc1.html after 2 seconds
+        }, 20000); // 2000 milliseconds = 2 seconds
+    </script>
+</body>
+</html>
