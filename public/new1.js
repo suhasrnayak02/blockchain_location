@@ -136,7 +136,7 @@ async function Connect() {
     web3.eth.defaultAccount = accounts[0];
     
     console.log('Web3 initialized successfully');
-    const address = "0xa6D4d1E2543aB7bD4D7c3023D144f540d65C0CCf";
+    const address = "0xFe79a22b793e48A695A614752071dF45c66fa224";
     contract = new web3.eth.Contract(abi, address);
     
     // Now you can use the contract object for Ethereum operations

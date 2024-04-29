@@ -9,56 +9,61 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('https://tse3.mm.bing.net/th?id=OIP.aGtXwNvEnmMXIei4bOVHgQHaEb&pid=Api&P=0&h=180'); /* Background image URL */
+            background-image: url('https://wallpapercave.com/wp/wp2337027.jpg'); /* Background image URL */
             background-size: cover;
             background-position: center;
             margin: 0;
             padding: 0;
-            display: grid;
-            place-items: center;
-            height: 100vh;
+            color: #333; /* Dark text color */
+        }
+
+        .welcome {
             text-align: center;
+            margin-top: 50px;
+            font-size: 32px; /* Increased font size */
+            color: #fff; /* White text color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
         }
 
         .container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
             margin-top: 50px;
         }
 
-        .grid {
-            background-color: #fff;
+        .content-section {
+            flex: 1;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-image: url('https://tse3.mm.bing.net/th?id=OIP.aGtXwNvEnmMXIei4bOVHgQHaEb&pid=Api&P=0&h=180'); /* Blockchain-related image URL */
-            background-size: cover;
-            background-position: center;
+            background-color: rgba(255, 255, 255, 0.167); /* Semi-transparent white background */
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow */
+        }
+
+        .image-section {
+            flex: 1;
+            padding: 20px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-wrap: wrap;
             justify-content: center;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            align-items: center;
         }
 
-        h1 {
-            margin-bottom: 20px;
-            color: #fff;
-        }
-
-        p {
-            color: #fff;
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Box shadow */
         }
 
         .advantages {
             margin-top: 50px;
-            color: #fff;
+            color: #fff; /* White text color */
         }
 
         .advantages h2 {
-            color: #1E90FF;
+            color: #1E90FF; /* Blue heading color */
         }
 
         .advantages ul {
@@ -72,39 +77,39 @@
 
         .advantages li:before {
             content: "✓ ";
-            color: #1E90FF;
+            color: #1E90FF; /* Blue checkmark color */
             font-weight: bold;
+            margin-right: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to the Dashboard</h1>
+    <h1 class="welcome">Welcome to  Future of Privacy </h1>
 
     <div class="container">
-        <div class="grid">
-           
+        <div class="content-section">
+            <!-- Place your content here -->
+            <div class="advantages">
+                
+                <ul>
+                    <li>Decentralization: No central authority controls the network.</li>
+                    <li>Security: Data is encrypted and stored across multiple nodes, making it highly secure.</li>
+                    <li>Transparency: All transactions are recorded on a public ledger, ensuring transparency.</li>
+                    <li>Trustless Transactions: Transactions can be made without the need for intermediaries.</li>
+                    <li>Immutable Records: Once recorded, data cannot be altered or tampered with.</li>
+                    <li>Smart Contracts: Self-executing contracts with predefined conditions.</li>
+                </ul>
+            </div>
         </div>
-        <div class="grid">
-           
+        <div class="image-section">
+            <img src="https://technicalistechnical.com/wp-content/uploads/2021/05/aa-768x543.jpg" alt="Blockchain Image">
+            <!-- Add more images as needed -->
         </div>
     </div>
-
-    <div class="advantages">
-        <h2>Advantages of Web3 and Blockchain:</h2>
-        <ul>
-            <li>Decentralization: No central authority controls the network.</li>
-            <li>Security: Data is encrypted and stored across multiple nodes, making it highly secure.</li>
-            <li>Transparency: All transactions are recorded on a public ledger, ensuring transparency.</li>
-            <li>Trustless Transactions: Transactions can be made without the need for intermediaries.</li>
-            <li>Immutable Records: Once recorded, data cannot be altered or tampered with.</li>
-            <li>Smart Contracts: Self-executing contracts with predefined conditions.</li>
-        </ul>
-    </div>
-
     <script>
         setTimeout(() => {
-            window.location.href = '/loc12.html'; // Redirect to loc1.html after 2 seconds
-        }, 2000); // 2000 milliseconds = 2 seconds
+            window.location.href = '/loc12.html'; // Redirect to loc1.html after 20 seconds
+        }, 5000); // 20000 milliseconds = 20 seconds
     </script>
 </body>
 </html>
